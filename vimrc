@@ -35,6 +35,9 @@ imap jj <Esc> " Professor VIM says '87% of users prefer jj over esc', jj abrams 
 set wildignore=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.png,*.jpg,*.o,.DS_Store
 
 
+" pathogen  ***************************************************************
+execute pathogen#infect()
+
 " Tabs ************************************************************************
 "set sta " a <Tab> in an indent inserts 'shiftwidth' spaces
 
@@ -95,11 +98,16 @@ set smartcase " Ignore case when searching lowercase
 nmap <Leader>a :silent exec "while !search( @/, \"W\") \| bnext \| 0 \| endwhile"<CR>
 
 " Colors **********************************************************************
-"set t_Co=256 " 256 colors
-set background=dark 
+set t_Co=256 " 256 colors
 syntax on " syntax highlighting
-"colorscheme ir_dark
+syntax enable
 
+set background=dark 
+let g:solarized_termcolors=256
+
+
+
+colorscheme solarized
 
 " Status Line *****************************************************************
 set showcmd
@@ -117,12 +125,8 @@ set linebreak  " Wrap at word
 "set backupdir=~/backup/vim
 "set backup
 
-" Set Swap directory
-"set directory=~/backup/vim/swap
-
-" Sets path to directory buffer was loaded from
-"autocmd BufEnter * lcd %:p:h
-
+" Set no swap file
+set noswapfile
 
 " File Stuff ******************************************************************
 filetype plugin indent on
@@ -248,6 +252,12 @@ map <Leader>t :TlistToggle<cr>
 map <Leader>j <C-]>
 
 
-" pathogen  ***************************************************************
-execute pathogen#infect()
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
