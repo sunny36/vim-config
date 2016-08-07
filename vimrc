@@ -98,14 +98,12 @@ set smartcase " Ignore case when searching lowercase
 nmap <Leader>a :silent exec "while !search( @/, \"W\") \| bnext \| 0 \| endwhile"<CR>
 
 " Colors **********************************************************************
-set t_Co=256 " 256 colors
+" set t_Co=256 " 256 colors
 syntax on " syntax highlighting
 syntax enable
 
 set background=dark 
-let g:solarized_termcolors=256
-
-
+let g:solarized_termtrans = 1
 
 colorscheme solarized
 
@@ -261,3 +259,5 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+let g:jsx_ext_required = 0

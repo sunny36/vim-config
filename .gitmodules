@@ -13,3 +13,12 @@
 [submodule "bundle/vim-go"]
 	path = bundle/vim-go
 	url = git@github.com:fatih/vim-go.git
+[submodule "bundle/vim-babel"]
+	path = bundle/vim-babel
+	url = git@github.com:jbgutierrez/vim-babel.git
+[submodule "bundle/vim-jsx"]
+	path = bundle/vim-jsx
+	url = https://github.com/mxw/vim-jsx.git
+[submodule "bundle/emmet-vim"]
+	path = bundle/emmet-vim
+	url = git@github.com:mattn/emmet-vim.git
