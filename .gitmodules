@@ -28,3 +28,13 @@
 [submodule "bundle/taboo.vim"]
 	path = bundle/taboo.vim
 	url = git@github.com:gcmt/taboo.vim.git
+[submodule "bundle/taboo.vim"]
+	path = bundle/taboo.vim
+	url = git@github.com:gcmt/taboo.vim.git
+[submodule "bundle/nerdcommenter"]
+	path = bundle/nerdcommenter
+	url = git@github.com:preservim/nerdcommenter.git
+[submodule "bundle/scss-syntax.vim"]
+	path = bundle/scss-syntax.vim
+	url = git@github.com:cakebaker/scss-syntax.vim.git
+
